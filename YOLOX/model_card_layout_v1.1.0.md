@@ -8,7 +8,7 @@
 
 <!-- Provide a quick summary of what the model is/does. -->
 
-The layout_v1.1.0 is YoloX model trained by Unstructured on custom unstructured_mar24_2 dataset for layout detection tasks. The model is designed to take document image as input and output bounding boxes of layout elements: paragraph, page_number, image, paragraphs_in_image, title, table, paragraphs_in_table, other, page_header, subheading, formulas, page_footer, paragraphs_in_form, checkbox, checkbox_checked, form, radio_button_checked, radio_button, code_snippet. YoloX architecture was introduced in paper 'YOLOX: Exceeding YOLO Series in 2021' by Zheng Ge et al.
+The layout_v1.1.0 is YoloX model trained by Unstructured on custom dataset for layout detection tasks. The model is designed to take document image as input and output bounding boxes of layout elements: paragraph, page_number, image, paragraphs_in_image, title, table, paragraphs_in_table, other, page_header, subheading, formulas, page_footer, paragraphs_in_form, checkbox, checkbox_checked, form, radio_button_checked, radio_button, code_snippet. YoloX architecture was introduced in paper 'YOLOX: Exceeding YOLO Series in 2021' by Zheng Ge et al.
 
 ## Model Details
 
@@ -16,7 +16,7 @@ The layout_v1.1.0 is YoloX model trained by Unstructured on custom unstructured_
 
 <!-- Provide a longer summary of what this model is. -->
 
-The layout_v1.1.0 is YoloX architecture model, an advanced version of the YOLO object detection architecture. Introduced in paper 'YOLOX: Exceeding YOLO Series in 2021' by Zheng Ge et al, developed as part of the SuperGradients repository by Deci-AI, extended with custom post-processing by Unstructured, is a cutting-edge object detection model that focuses on improving speed and accuracy. With various enhancements and optimizations, it enables efficient and precise object detection across a range of applications. The model is designed to take document image as input and output bounding boxes of layout elements: paragraph, page_number, image, paragraphs_in_image, title, table, paragraphs_in_table, other, page_header, subheading, formulas, page_footer, paragraphs_in_form, checkbox, checkbox_checked, form, radio_button_checked, radio_button, code_snippet. Data used for training is a custom unstructured_mar24_2 dataset for layout detection tasks, it contains mostly images of tables from science or financial documents. Model is not available for public use.
+The layout_v1.1.0 is YoloX architecture model, an advanced version of the YOLO object detection architecture. Introduced in paper 'YOLOX: Exceeding YOLO Series in 2021' by Zheng Ge et al, developed as part of the SuperGradients repository by Deci-AI, extended with custom post-processing by Unstructured, is a cutting-edge object detection model that focuses on improving speed and accuracy. With various enhancements and optimizations, it enables efficient and precise object detection across a range of applications. The model is designed to take document images as input and output bounding boxes for a list of proprietary layout elements from Unstructured. This design ensures that the inference can be generalized to various types of documents. It is trained on a 50K custom dataset for layout detection tasks. The model is not available for public use.
 
 - **Developed by:** Unstructured.io
 - **Funded by [optional]:** Unstructured.io
@@ -30,7 +30,7 @@ The layout_v1.1.0 is YoloX architecture model, an advanced version of the YOLO o
 
 <!-- Provide the basic links for the model. -->
 
-- **Repository:** https://github.com/Unstructured-IO/od-modelling-super-gradients (not available for public use)
+- **Repository:** not available for public use
 - **Paper [optional]:** https://arxiv.org/abs/2107.08430
 - **Demo [optional]:** Not available
 
@@ -84,7 +84,7 @@ from super_gradients.training.utils.predict import DetectionPrediction, ImageDet
 from unstructured_sg.model_configs import MODEL_CONFIGS_ONNX, UnstructuredODModelConfigOnnx
 from unstructured_sg.utils.inference import load_document, save_detection_prediction_to_json
 
-model_name = "yolox_mar24_4_2"  # alias for layout_v1.1.0
+model_name = "internal_hf_model_name_for_layout_v1.1.0"  # alias for layout_v1.1.0
 model_config = MODEL_CONFIGS_ONNX[model_name]
 
 # Start onnx session
@@ -121,7 +121,7 @@ for page_count, image_array in enumerate(images):
 
 <!-- This should link to a Dataset Card, perhaps with a short stub of information on what the training data is all about as well as documentation related to data pre-processing or additional filtering. -->
 
-The training data is custom dataset prepared by Unstructured. The unstructured_mar24_2 dataset [train split] contains about 50K images of documents from different domains, mostly science and financial documents. It is annotated with bbox coordinates for layout elements: paragraph, page_number, image, paragraphs_in_image, title, table, paragraphs_in_table, other, page_header, subheading, formulas, page_footer, paragraphs_in_form, checkbox, checkbox_checked, form, radio_button_checked, radio_button, code_snippet.
+The training data is a custom dataset proprietary to Unstructured. The data is not available to the public.
 
 ### Training Procedure
 
@@ -152,7 +152,7 @@ Image resizing, and data augmentation techniques such as random cropping, blurri
 
 <!-- This should link to a Dataset Card if possible. -->
 
-Validation dataset is a subset [test split] of the unstructured_mar24_2 dataset.
+The training data is a custom dataset proprietary to Unstructured. The data is not available to the public.
 
 #### Factors
 
@@ -168,7 +168,7 @@ mAP (mean Average Precision), F1 score, Precision, Recall.
 
 ### Results
 
-The model outperforms previous versions in terms of F1 score, achieving over 0.6 F1 score on unstructured_mar24_2 dataset [test split].
+The model outperforms several internal and sampled public datasets.
 
 #### Summary
 
