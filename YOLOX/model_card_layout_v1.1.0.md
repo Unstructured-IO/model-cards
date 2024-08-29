@@ -1,7 +1,10 @@
----
-# For reference on model card metadata, see the spec: https://github.com/huggingface/hub-docs/blob/main/modelcard.md?plain=1
-# Doc / guide: https://huggingface.co/docs/hub/model-cards
----
+<!--
+
+#For reference on model card metadata, see the spec: https://github.com/huggingface/hub-docs/blob/main/modelcard.md?plain=1
+
+#Doc / guide: https://huggingface.co/docs/hub/model-cards
+
+-->
 
 # Model Card for layout_v1.1.0
 
@@ -134,11 +137,6 @@ Image resizing, and data augmentation techniques such as random cropping, blurri
 
 - **Training regime:** The model was trained using Stochastic Gradient Descent (SGD) with a variable learning rate adjusted according to a specific schedule. Multiple GPUs were employed for distributed training. <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
 
-#### Speeds, Sizes, Times [optional]
-
-<!-- This section provides information about throughput, start/end time, checkpoint size if relevant, etc. -->
-
-[More Information Needed]
 
 ## Evaluation
 
@@ -172,11 +170,6 @@ The model outperforms several internal and sampled public datasets.
 
 Significant improvements in layout element detection.
 
-## Model Examination [optional]
-
-<!-- Relevant interpretability work for the model goes here -->
-
-[More Information Needed]
 
 ## Environmental Impact [optional]
 
@@ -196,9 +189,6 @@ Carbon emissions can be estimated using the [Machine Learning Impact calculator]
 
 Object detection model with YOLOX architecture, trained on custom dataset for layout detection tasks.
 
-### Compute Infrastructure
-
-[More Information Needed]
 
 #### Hardware
 
@@ -214,21 +204,17 @@ Python 3.x, PyTorch, unstructured_sg.
 
 **BibTeX:** **[optional]**
 
-@article{yolox2021, title={YOLOX: Exceeding YOLO Series in 2021}, author={Ge, Zheng and others}, journal={arXiv preprint arXiv:2107.08430}, year={2021}}
+@article{yolox2021,
+    title={YOLOX: Exceeding YOLO Series in 2021},
+    author={Ge, Zheng and others},
+    journal={arXiv preprint arXiv:2107.08430},
+    year={2021}
+}
 
 **APA:** **[optional]**
 
 Ge, Zheng, et al. (2021). YOLOX: Exceeding YOLO Series in 2021. arXiv preprint arXiv:2107.08430.
 
-## Glossary [optional]
-
-<!-- If relevant, include terms and calculations in this section that can help readers understand the model or model card. -->
-
-[More Information Needed]
-
-## More Information [optional]
-
-[More Information Needed]
 
 ## Model Card Authors [optional]
 
