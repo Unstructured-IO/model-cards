@@ -1,7 +1,6 @@
 ---
 # For reference on model card metadata, see the spec: https://github.com/huggingface/hub-docs/blob/main/modelcard.md?plain=1
 # Doc / guide: https://huggingface.co/docs/hub/model-cards
-
 ---
 
 # Model Card for layout_v1.1.0
@@ -113,7 +112,7 @@ for page_count, image_array in enumerate(images):
   output_image_path = f"{file_name.removesuffix(suffix)}_{page_count}.png"
   cv2.imwrite(str(output_image_path), image_output)
   save_detection_prediction_to_json(image_detection_prediction, output_image_path)
-
+```
 
 ## Training Details
 
@@ -130,7 +129,6 @@ The training data is a custom dataset proprietary to Unstructured. The data is n
 #### Preprocessing [optional]
 
 Image resizing, and data augmentation techniques such as random cropping, blurring and color jittering are used.
-
 
 #### Training Hyperparameters
 
@@ -239,3 +237,8 @@ Untructured.io
 ## Model Card Contact
 
 shane@unstructured.io
+
+```
+
+```
+
